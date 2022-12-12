@@ -2,6 +2,7 @@ import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import './App.css';
 import Modal from 'react-modal';
+import { ModalProvider, ModalContext, ModalRoot } from 'react-multi-modal';
 
 const customStyles = {
 	content: {
@@ -161,8 +162,8 @@ function App() {
 							<tr key={id}>
 								<td>{id}</td>
 								<td>{title}</td>
-								<td>{author}</td>
 								<td>{isbn}</td>
+								<td>{author}</td>
 								<td>
 									<button className="btn-sec" onClick={openModal}>
 										Edit
